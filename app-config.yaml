@@ -71,8 +71,8 @@ auth:
   providers:
     github:
       development:
-        clientId: Ov23liWypHgI9GqML9EK
-        clientSecret: b57dceb8b8b322878a7ce177e146b11b490b1ce1
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
         signIn:
           resolvers:
             - resolver: usernameMatchingUserEntityName
