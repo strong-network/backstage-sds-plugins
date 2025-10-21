@@ -1,0 +1,108 @@
+app:
+  title: Scaffolded Backstage App
+  baseUrl: http://localhost:3000
+
+organization:
+  name: SDS Citrix
+
+backend:
+  # Used for enabling authentication, secret is shared by all backend plugins
+  # See https://backstage.io/docs/auth/service-to-service-auth for
+  # information on the format
+  # auth:
+  #   keys:
+  #     - secret: ${BACKEND_SECRET}
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+    # Uncomment the following host directive to bind to specific interfaces
+    # host: 127.0.0.1
+  csp:
+    connect-src: ["'self'", 'http:', 'https:']
+    # Content-Security-Policy directives follow the Helmet format: https://helmetjs.github.io/#reference
+    # Default Helmet Content-Security-Policy values can be removed by setting the key to false
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
+  # This is for local development only, it is not recommended to use this in production
+  # The production database configuration is stored in app-config.production.yaml
+  database:
+    client: better-sqlite3
+    connection:
+      directory: ./data
+  # database:
+  #   client: pg
+  #   connection:
+  #     host: 127.0.0.1
+  #     port: 5432
+  #     user: postgres
+  #     password: djekatore
+      
+
+# integrations:
+#   github:
+#     - host: github.com
+#       # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
+#       # about setting up the GitHub integration here: https://backstage.io/docs/integrations/github/locations#configuration
+#       token: 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
+    ### Example for how to add your GitHub Enterprise instance using the API:
+    # - host: ghe.example.net
+    #   apiBaseUrl: https://ghe.example.net/api/v3
+    #   token: ${GHE_TOKEN}
+
+# proxy:
+  ## Example for how to add a proxy endpoint for the frontend.
+  ## A typical reason to do this is to handle HTTPS and CORS for internal services.
+  # endpoints:
+  #   '/api':
+  #     target: '/'
+
+permission:
+  enabled: true
+  rules:
+    allow-guest:
+      effect: allow
+      resourceType: '*'
+      action: '*'
+      
+auth:
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: Ov23liWypHgI9GqML9EK
+        clientSecret: b57dceb8b8b322878a7ce177e146b11b490b1ce1
+        signIn:
+          resolvers:
+            - resolver: usernameMatchingUserEntityName
+              dangerouslyAllowSignInWithoutUserInCatalog: true #TO BE REMOVED when we have users in the catalog from github
+
+
+techdocs:
+  builder: 'local' # Alternatives - 'external'
+  generator:
+    runIn: 'docker' # Alternatives - 'local'
+  publisher:
+    type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+
+
+catalog:
+  locations:
+    - type: url
+      target: https://github.com/strong-network/project-acme/blob/20251001_ad_add_backstage_component/backstage-demo/backstage-demo-catalog-info.yaml
+  # providers:
+  #   github:
+  #     org:
+  #       - id: my-org
+  #         orgUrl: https://github.com/strong-network
+  #         token: ${GITHUB_TOKEN}         # PAT with at least 'read:org'
+  #         schedule:
+  #           frequency: { minutes: 30 }
+  #           timeout: { minutes: 3 }
+
+#  TO BE ADDED FOR SDS WORKSPACES PLUGIN
+sdsWorkspaces:
+  platformURL: ${SDS_PLATFORM_URL}
+  authClientId: ${AUTH_SDS_CLIENT_ID}
+  authClientSecret: ${AUTH_SDS_CLIENT_SECRET}
