@@ -1,0 +1,1 @@
+export { ConfigurationComponent } from './ConfigurationComponent';

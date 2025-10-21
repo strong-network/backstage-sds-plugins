@@ -1,0 +1,1 @@
+export { SDSWorkspacesTab } from './SDSWorkspacesTab';
