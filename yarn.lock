@@ -29907,6 +29907,7 @@ __metadata:
   dependencies:
     "@backstage/cli": "npm:^0.34.1"
     "@backstage/e2e-test-utils": "npm:^0.1.1"
+    "@backstage/frontend-plugin-api": "npm:^0.12.1"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.1"
     "@mui/material": "npm:^7.3.2"

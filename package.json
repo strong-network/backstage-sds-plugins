@@ -52,6 +52,7 @@
   },
   "packageManager": "yarn@4.4.1",
   "dependencies": {
+    "@backstage/frontend-plugin-api": "^0.12.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.2",

@@ -13,6 +13,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "exports": {
+    ".": "./src/index.ts",
+    "./alpha": "./src/alpha.tsx",
+    "./package.json": "./package.json"
+  },
   "backstage": {
     "role": "frontend-plugin",
     "pluginId": "sds-workspaces",

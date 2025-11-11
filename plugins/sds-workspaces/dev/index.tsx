@@ -5,7 +5,7 @@ createDevApp()
   .registerPlugin(sdsWorkspacesPlugin)
   .addPage({
     element: <SdsWorkspacesPage />,
-    title: 'Root Page',
+    title: 'Sds Workspaces',
     path: '/sds-workspaces',
   })
   .render();

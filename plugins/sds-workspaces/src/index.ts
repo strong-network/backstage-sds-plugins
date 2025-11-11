@@ -1,1 +1,1 @@
-export { sdsWorkspacesPlugin, SdsWorkspacesPage, SDSWorkspaceCard, SDSWorkspacesTab } from './plugin';
+export { sdsWorkspacesPlugin } from './alpha';
