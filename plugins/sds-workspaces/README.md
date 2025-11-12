@@ -99,3 +99,27 @@ This creates a new "SDS Workspaces" tab in the entity page navigation.
 
 **Note:**  
 If your entity page uses a different layout, insert these components where other entity cards or tabs are configured.
+
+---
+
+## New Frontend System Support
+
+This plugin supports [**Backstage's New Frontend System**](https://backstage.io/docs/frontend-system/), which provides a more modular and extensible plugin architecture.
+
+### Using with the New Frontend System
+
+If your Backstage instance uses the new frontend system, you can install this plugin using the **alpha export**:
+
+```typescript
+// packages/app/src/index.tsx
+import sdsWorkspacesPlugin from '@citrixcloud/backstage-sds-workspaces/alpha';
+
+const app = createApp({
+  features: [
+    // ... other plugins
+    sdsWorkspacesPlugin,
+  ],
+});
+```
+
+The plugin will automatically provide the `SDSWorkspaceCard` and `SDSWorkspacesTab` as declarative extensions using blueprints, along with the configured API client.

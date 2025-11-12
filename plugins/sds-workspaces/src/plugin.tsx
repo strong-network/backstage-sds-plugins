@@ -28,6 +28,8 @@ export const sdsWorkspacesPlugin = createPlugin({
   ],
 });
 
+
+// old exports
 export const SdsWorkspacesPage = sdsWorkspacesPlugin.provide(
   createRoutableExtension({
     name: 'SdsWorkspacesPage',
@@ -46,6 +48,7 @@ export const SDSWorkspaceCard = sdsWorkspacesPlugin.provide(
   }),
 );
 
+
 export const SDSWorkspacesTab = sdsWorkspacesPlugin.provide(
   createRoutableExtension({
     name: 'SDSWorkspacesTab',
@@ -54,8 +57,3 @@ export const SDSWorkspacesTab = sdsWorkspacesPlugin.provide(
     mountPoint: rootRouteRef,
   }),
 );
-
-
-
-
-
