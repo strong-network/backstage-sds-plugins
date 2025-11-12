@@ -20,6 +20,8 @@
     "@backstage/core-app-api": "^1.18.0",
     "@backstage/core-components": "^0.17.5",
     "@backstage/core-plugin-api": "^1.10.9",
+    "@backstage/frontend-defaults": "^0.3.2",
+    "@backstage/frontend-plugin-api": "^0.12.1",
     "@backstage/integration-react": "^1.2.9",
     "@backstage/plugin-api-docs": "^0.12.10",
     "@backstage/plugin-catalog": "^1.31.2",
