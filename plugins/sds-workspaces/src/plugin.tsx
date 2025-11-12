@@ -6,15 +6,8 @@ import {
   identityApiRef,
 } from '@backstage/core-plugin-api';
 
-import {
-  compatWrapper,
-} from '@backstage/core-compat-api';
-
 import { rootRouteRef } from './routes';
 import { WorkspacesApiClient, workspacesApiRef } from './api/api-client';
-import { EntityCardBlueprint, EntityContentBlueprint } from '@backstage/plugin-catalog-react/alpha';
-
-
 
 export const sdsWorkspacesPlugin = createPlugin({
   id: 'sds-workspaces',
@@ -35,28 +28,6 @@ export const sdsWorkspacesPlugin = createPlugin({
   ],
 });
 
-
-export const sdsWorkspaceCard = EntityCardBlueprint.make({
-  name: 'SDSWorkspaceCard',
-  params: {
-    loader: async () =>
-      import('./components/SDSWorkspaceCard').then(m =>
-        compatWrapper(<m.SDSWorkspaceCard />),
-      ),
-  },
-});
- 
-export const sdsWorkspacesTab = EntityContentBlueprint.make({
-  name: 'SDSWorkspacesTab',
-  params: {
-    path: '/sds-workspaces',
-    title: 'SDS Workspaces',
-    loader: async () =>
-      import('./components/SDSWorkspacesTab').then(m =>
-        compatWrapper(<m.SDSWorkspacesTab />),
-      ),
-  },
-});
 
 // old exports
 export const SdsWorkspacesPage = sdsWorkspacesPlugin.provide(
@@ -86,11 +57,3 @@ export const SDSWorkspacesTab = sdsWorkspacesPlugin.provide(
     mountPoint: rootRouteRef,
   }),
 );
-
-
-
-
-
-
-
-
