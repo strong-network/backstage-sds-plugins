@@ -42,7 +42,6 @@ import { githubAuthApiRef } from '@backstage/core-plugin-api';
 
 
 import { SdsWorkspacesPage } from '@citrixcloud/backstage-sds-workspaces';
-// import { SdsWorkspacesPage } from '../../../plugins/sds-workspaces/'
 
 
 const app = createApp({

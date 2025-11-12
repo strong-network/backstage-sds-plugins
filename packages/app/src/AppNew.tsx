@@ -11,7 +11,6 @@ import techdocsPlugin from '@backstage/plugin-techdocs/alpha';
 
 import { SignInPage } from '@backstage/core-components';
 
-// import sdsWorkspacesPlugin from '../../../plugins/sds-workspaces/src/alpha'
 import sdsWorkspacesPlugin  from '@citrixcloud/backstage-sds-workspaces/alpha';
 
 

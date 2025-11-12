@@ -7,7 +7,6 @@
  */
 
 import { createBackend } from '@backstage/backend-defaults';
-// import sdsWorkspacesPlugin from '../../../plugins/sds-workspaces-backend';
 
 const backend = createBackend();
 
