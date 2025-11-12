@@ -20,7 +20,13 @@
     "lint": "backstage-cli repo lint --since origin/master",
     "lint:all": "backstage-cli repo lint",
     "prettier:check": "prettier --check .",
-    "new": "backstage-cli new"
+    "new": "backstage-cli new",
+    "use:local:frontend-plugin": "yarn workspace app add @citrixcloud/backstage-sds-workspaces@workspace:./plugins/sds-workspaces",
+    "use:registry:frontend-plugin": "yarn workspace app add @citrixcloud/backstage-sds-workspaces@npm:^0.1.6",
+    "use:local:backend-plugin": "yarn workspace backend add @citrixcloud/backstage-sds-workspaces-backend@workspace:./plugins/sds-workspaces-backend",
+    "use:registry:backend-plugin": "yarn workspace backend add @citrixcloud/backstage-sds-workspaces-backend@npm:^0.1.6",
+    "use:local-plugins": "yarn run use:local:frontend-plugin && yarn run use:local:backend-plugin",
+    "use:registry-plugins": "yarn run use:registry:frontend-plugin && yarn run use:registry:backend-plugin"
   },
   "workspaces": {
     "packages": [
