@@ -4608,7 +4608,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@citrixcloud/backstage-sds-workspaces@npm:^0.1.2, @citrixcloud/backstage-sds-workspaces@workspace:plugins/sds-workspaces":
+"@citrixcloud/backstage-sds-workspaces@npm:^0.1.4, @citrixcloud/backstage-sds-workspaces@workspace:plugins/sds-workspaces":
   version: 0.0.0-use.local
   resolution: "@citrixcloud/backstage-sds-workspaces@workspace:plugins/sds-workspaces"
   dependencies:
@@ -15051,7 +15051,7 @@ __metadata:
     "@backstage/test-utils": "npm:^1.7.11"
     "@backstage/theme": "npm:^0.6.8"
     "@backstage/ui": "npm:^0.7.0"
-    "@citrixcloud/backstage-sds-workspaces": "npm:^0.1.2"
+    "@citrixcloud/backstage-sds-workspaces": "npm:^0.1.4"
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
     "@playwright/test": "npm:^1.55.0"

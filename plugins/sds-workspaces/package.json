@@ -1,6 +1,6 @@
 {
   "name": "@citrixcloud/backstage-sds-workspaces",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "bugs": {
@@ -15,7 +15,7 @@
   },
   "exports": {
     ".": "./src/index.ts",
-    "./alpha": "./src/alpha.tsx",
+    "./alpha": "./src/alpha.ts",
     "./package.json": "./package.json"
   },
   "backstage": {

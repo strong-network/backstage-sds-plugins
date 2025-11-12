@@ -58,8 +58,8 @@ import {
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
 
-import { SDSWorkspaceCard, SDSWorkspacesTab } from '@citrixcloud/backstage-sds-workspaces';
-// import { SDSWorkspaceCard, SDSWorkspacesTab } from '@/../../plugins/sds-workspaces';
+// import { SDSWorkspaceCard, SDSWorkspacesTab } from '@citrixcloud/backstage-sds-workspaces';
+import { SDSWorkspaceCard, SDSWorkspacesTab } from '@/../../plugins/sds-workspaces';
 
 const techdocsContent = (
   <EntityTechdocsContent>
